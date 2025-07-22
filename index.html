@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenses Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Expenses Tracker</h1>
+    </header>
+    <br />
+    <main>
+      <div class="transactions">
+        <label for="descriptions">Descriptions <i>(required)</i></label>
+        <input type="text" name="descriptions" id="descriptions" placeholder="Descriptions" autocomplete="off" required />
+        <label for="amount">Amount <i>(required)</i></label>
+        <input type="number" name="amount" id="amount" placeholder="Amount" min="1" autocomplete="off" required value="1" />
+        <br />
+        <button type="button" id="addTransaction">Add Transaction</button>
+      </div>
+      <div class="summary">
+        <div class="income-input">
+          <input type="number" name="setIncome" id="setIncome" placeholder="Set your income..." min="1" autocomplete="off" required />
+          <button type="button" id="setIncomeBtn">Set Income</button>
+        </div>
+        <div class="summary-details">
+          <div class="summary-desc">
+            <p>Income</p>
+            <p>Expenses</p>
+            <strong><p>Total Balance</p></strong>
+          </div>
+          <div class="summary-number">
+            <p id="income">Rp 0</p>
+            <p id="expenses">Rp 0</p>
+            <strong><p id="totalBalance">Rp 0</p></strong>
+          </div>
+        </div>
+      </div>
+      <div class="expenses-details">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Descriptions</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="transactionsTable"></tbody>
+        </table>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
